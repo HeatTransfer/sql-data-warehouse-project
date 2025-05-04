@@ -1,0 +1,23 @@
+======= Data Modelling ========
+The process of organizing data objects in meaningful way and define relationship among them.
+
+>> Types:
+1. Conceptual Data Model: Highest level of abstraction. Only define the tables/data objects.
+2. Logical Data Model: Defines PK, FK and entity relationships like 1-to-1, 1-to-many etc.
+3. Physical Data Model: Defines data types of the columns and actual data stored in DB tables.
+
+(1) and (2) are widely used in the industry.
+
+======= Dimension and Fact Table =========
+1. Dimension Table: Contains descriptive information about the data.
+   e.g. Customers Table contains data about customers
+   		Products Table contains different attributes of products.
+2. Fact Table: Contains events or transactions and helfl in aggregations to derive insights.
+   e.g. Sales Table contains information about sale of different products, their order value, order date, shipping date etc.
+
+======= Dimension and Measures =========
+We can categorize columns in a table into dims and measures.
+If NOT Numeric - Measure, e.g. Category, ProductName, Subcategory, Birthdate. We can GROUP data by Measures.
+If Numeric & make sense to be aggregated - Fact, e.g. Sales, Quantity, Age, Price
+
+Note: CustomerID can be Numeric but it doesn't make sense to aggregate it. So, CustomerID is a Dimension NOT a Measure.
